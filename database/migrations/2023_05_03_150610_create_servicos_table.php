@@ -38,6 +38,12 @@ class CreateServicosTable extends Migration
             $table->decimal('valor_quintal', 10, 2);
             $table->integer('horas_quintal');
 
+            $table->decimal('valor_outros', 10, 2);
+            $table->integer('horas_outros');
+
+            $table->string('icon');
+            $table->integer('posicao');
+
             $table->timestamps();
         });
     }
