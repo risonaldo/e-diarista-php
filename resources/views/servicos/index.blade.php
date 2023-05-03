@@ -17,17 +17,21 @@
         </thead>
         <tbody>
             @forelse ($servicos as $servico )
-
-            @empty
-
-            @endforelse
-            @foreach ($servicos as $servico)
                 <tr>
                     <th>{{ $servico->id }}</th>
                     <th>{{ $servico->nome }}</th>
                     <th>aaaa</th>
                 </tr>
-            @endforeach
+            @empty
+                <tr>
+                    <th></th>
+                    <th>Nenhum registro encontrado</th>
+                    <th></th>
+                </tr>
+            @endforelse
         </tbody>
     </table>
+
+    {{ $servicos->links() }}
+
 @stop
