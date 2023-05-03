@@ -3,16 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Aa\
+use App\Models\Servico;
 
 class ServicoController extends Controller
 {
     public function index()
     {
         $servicos = Servico::get();
-
-        dd($servicos);
-
-        return view('servicos.index');
+        return view('servicos.index')->with('servicos', $servicos);
     }
 }
